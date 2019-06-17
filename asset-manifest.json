@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Jake-and-Amir-Ranked/static/css/main.73c944fe.chunk.css",
-    "main.js": "/Jake-and-Amir-Ranked/static/js/main.0a5ff7a5.chunk.js",
-    "main.js.map": "/Jake-and-Amir-Ranked/static/js/main.0a5ff7a5.chunk.js.map",
+    "main.js": "/Jake-and-Amir-Ranked/static/js/main.d7a1f55e.chunk.js",
+    "main.js.map": "/Jake-and-Amir-Ranked/static/js/main.d7a1f55e.chunk.js.map",
     "runtime~main.js": "/Jake-and-Amir-Ranked/static/js/runtime~main.36f918d6.js",
     "runtime~main.js.map": "/Jake-and-Amir-Ranked/static/js/runtime~main.36f918d6.js.map",
     "static/js/2.4028265d.chunk.js": "/Jake-and-Amir-Ranked/static/js/2.4028265d.chunk.js",
     "static/js/2.4028265d.chunk.js.map": "/Jake-and-Amir-Ranked/static/js/2.4028265d.chunk.js.map",
     "index.html": "/Jake-and-Amir-Ranked/index.html",
-    "precache-manifest.a9e7e98ba7834320c6f87eef459afa1f.js": "/Jake-and-Amir-Ranked/precache-manifest.a9e7e98ba7834320c6f87eef459afa1f.js",
+    "precache-manifest.bd1e439bd5f238388c35100547919011.js": "/Jake-and-Amir-Ranked/precache-manifest.bd1e439bd5f238388c35100547919011.js",
     "service-worker.js": "/Jake-and-Amir-Ranked/service-worker.js",
     "static/css/main.73c944fe.chunk.css.map": "/Jake-and-Amir-Ranked/static/css/main.73c944fe.chunk.css.map"
   }
