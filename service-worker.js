@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/Jake-and-Amir-Ranked/precache-manifest.d480024c96b84046ad2c63a8d83484d9.js"
+  "/Jake-and-Amir-Ranked/precache-manifest.3c00f4d1d22ad75c50a893d44e0a1a44.js"
 );
 
 self.addEventListener('message', (event) => {

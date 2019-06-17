@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e057c4bc230e2a658c1ebd4d1f15f8da",
+    "revision": "7a514ca7921f17a821412b79474cbb86",
     "url": "/Jake-and-Amir-Ranked/index.html"
   },
   {
-    "revision": "4633f19c57080f2a9196",
+    "revision": "c3fbfd388b3ce4efc6de",
     "url": "/Jake-and-Amir-Ranked/static/css/main.73c944fe.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Jake-and-Amir-Ranked/static/js/2.4028265d.chunk.js"
   },
   {
-    "revision": "4633f19c57080f2a9196",
-    "url": "/Jake-and-Amir-Ranked/static/js/main.173bc8d1.chunk.js"
+    "revision": "c3fbfd388b3ce4efc6de",
+    "url": "/Jake-and-Amir-Ranked/static/js/main.dcb6bab1.chunk.js"
   },
   {
     "revision": "9a778abd597f85656ef4",
