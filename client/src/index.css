@@ -1,0 +1,52 @@
+body {
+  /* font: 14px "Century Gothic", Futura, sans-serif; */
+  margin: 20px;
+  background-color: #EEE;
+}
+/* 
+html, body, #app, #app>div {
+  width: 100%;
+} */
+
+.main-body {
+  margin-top: 56px;
+  padding-top: 25px;
+}
+
+.vote-button {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  width: 90%;
+  height: 75px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.single-video {
+  display:inline-block;
+  margin-top: 25px;
+  margin-left: 40px;
+  margin-right: 40px;  
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+}
+
+.explanation {
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+}
+
+.leaderboard-body {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leaderboard-table {
+  margin-top: 2em;
+}
