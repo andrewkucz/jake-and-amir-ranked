@@ -12,3 +12,6 @@ This project was my first personal React project and was meant to be a fun learn
 #### How to play
 Vote for which video you think is better using the buttons below them. You can watch the videos if you want a refresher or just speed vote to improve the accuracy of the leaderboard.
 NOTE: Every vote impacts both video's ELO rating, even if it doesn't look like the leaderboards are affected
+
+
+## [LIVE VERSION](https://jake-and-amir-ranked.herokuapp.com/)
