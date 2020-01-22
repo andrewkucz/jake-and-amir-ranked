@@ -4,19 +4,19 @@ const videoRoutes = express.Router();
 let Video = require('./video.model');
 
 // returns 2 videos with indexes passed in by query params index1 and index2 (does no checking to see if indices are valid 1-678)
-//   /api/video/2vids?index1=1&index2=2
+// /api/video/2vids?index1=1&index2=2
 videoRoutes.route('/2vids').get(function (req, res) {
 
   let q = req.query;
 
   Video.find({ $or: [ { index: q.index1 }, { index: q.index2 } ] })
-    .then(vids => { res.json(vids) })
-    .catch(error => { console.log(error); })
+  .then(vids => { res.json(vids) })
+  .catch(error => { console.log(error); })
 
 });
 
-//  Post an object with field videos that is an array with 2 objects to update their ratings
-//    /api/video/update/2vids
+// Post an object with field videos that is an array with 2 objects to update their ratings
+// /api/video/update/2vids
 videoRoutes.route('/update/2vids').post(function (req, res) {
 
   if(req.body.videos.length !== 2) {
@@ -28,18 +28,22 @@ videoRoutes.route('/update/2vids').post(function (req, res) {
   
 
   let callback = videos => {
-
-    if (!videos) { res.status(404).send("data is not found"); }
-    else {
-        
+      if (!videos)
+      {
+        res.status(404).send("data is not found");
+      }
+      else
+      {
         let len = videos.length;
+        let p = [];
         for(let i=0; i<len; i++)
         {
           videos[i].rating = req.body.videos[i].rating;
-          videos[i].save().then(function(video) {
-          });
+          p.push(videos[i].save());
         }
-        res.status(200).send('Success.');
+        Promise.all(p).then(result => {
+          res.status(200).send('Success');
+        })
       }
     };
 
@@ -49,8 +53,8 @@ videoRoutes.route('/update/2vids').post(function (req, res) {
 
 });
 
-//get the top (limit) in order by highest rating
-//    /api/video/top/{limit}
+// get the top (limit) in order by highest rating
+// /api/video/top/{limit}
 videoRoutes.route('/top/:limit').get(function (req, res) {
 
   Video

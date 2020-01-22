@@ -1,41 +1,33 @@
-import React, { Component } from 'react';
-import Axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export default class Leaderboard extends Component {
-    
-    constructor(props) {
-        super(props);
-        this.state = {
-          videos: Array(props.top).fill({}),
-        };
-      }
+export default function Leaderboard(props) {
+  
+  const [videos, setVideos] = useState([]);
 
-    componentWillMount() {
-        let that = this;
-        Axios.get('/api/video/top/' + this.props.top).then(function(res) {
-            that.setState({
-                videos: res.data
-            });
-        });
-    }
+  useEffect(() => {
 
-  render() {
-        return (
-            <div className="row">
-                <div className="col-12"><h2>Leaderboards</h2></div>
-                <div className="col-12">
-                <LeaderboardTable videos={this.state.videos}>
-                </LeaderboardTable>
-                </div>
+    axios.get('/api/video/top/' + props.top).then(function(res) {
+      setVideos(res.data);
+    });
+
+  },[]);
+
+    return (
+        <div className="row">
+            <div className="col-12">
+              <h2>Leaderboards</h2>
             </div>
-        )
-    }
+            <div className="col-12">
+              <LeaderboardTable videos={videos} />
+            </div>
+        </div>
+    );
 }
 
 
 
-class LeaderboardTable extends React.Component {
-    render() {
+function LeaderboardTable(props) {
       return (
         <table className="table leaderboard-table">
         <thead>
@@ -46,15 +38,14 @@ class LeaderboardTable extends React.Component {
           </tr>
         </thead>
         <tbody>
-          {this.props.videos.map((vid, i) =>
+          {props.videos.map((vid, i) =>
             <tr key={i}>
               <td>#{i+1}</td>
-              <td> <a href={'https://www.youtube.com/watch?v=' + vid.linkid } target="_blank" rel="noopener noreferrer">{vid.title}</a> </td>
+              <td><a href={'https://www.youtube.com/watch?v=' + vid.linkid } target="_blank" rel="noopener noreferrer">{vid.title}</a> </td>
               <td>{vid.rating}</td>
             </tr>
           )}
         </tbody>
         </table>
       );
-    }
-  }
+}
